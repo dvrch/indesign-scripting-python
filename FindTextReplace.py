@@ -1,6 +1,6 @@
 from win32com.client import Dispatch
 
-app = Dispatch("InDesign.Application.CC.2019")
+app = Dispatch("InDesign.Application")
 # What to find?
 app.FindTextPreferences.FindWhat = 'consequatur'
 # Change to what?

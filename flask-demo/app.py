@@ -9,9 +9,9 @@ import pythoncom
 
 app = Flask(__name__)
 
-businessCardTemplate = r'C:\ServerTestFiles\BusinessCardTemplate.indt'
+businessCardTemplate = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\BusinessCardTemplate.indt'
 myBusinessCard = 'myBusinessCard.pdf'
-businessCardFullPath = r'C:\ServerTestFiles' + '\\' + myBusinessCard
+businessCardFullPath = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign' + '\\' + myBusinessCard
 directory = os.path.dirname(businessCardFullPath)
 
 @app.route('/', methods=['GET'])
@@ -30,7 +30,9 @@ def processData():
     """
     pythoncom.CoInitialize()
 
-    indesign = win32com.client.Dispatch('InDesignServer.Application.CC.2017')
+    # indesign = win32com.client.Dispatch('InDesignServer.Application')
+    indesign = win32com.client.Dispatch('InDesign.Application')
+
     myDocument = indesign.Open(businessCardTemplate)
 
     textFrames = myDocument.TextFrames
@@ -63,3 +65,4 @@ def processData():
 
 if __name__ == '__main__':
     app.run(debug=True)
+# %%

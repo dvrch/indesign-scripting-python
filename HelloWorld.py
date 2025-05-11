@@ -3,10 +3,10 @@
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 # Get reference to InDesign application
-# app = indesign.Dispatch('InDesign.Application.CC.2017')
+# app = indesign.Dispatch('InDesign.Application')
 # Create a new document.
 myDocument = app.Documents.Add()
 # Get a reference to the first page.
@@ -18,7 +18,7 @@ myTextFrame.GeometricBounds = ["6p0", "6p0", "18p0", "18p0"]
 # Enter text in the text frame.
 myTextFrame.Contents = "Hello World!"
 # Save the document (fill in a valid file path).
-myFile = r'C:\ServerTestFiles\HelloWorld.indd'
+myFile = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\HelloWorld.indd'
 directory = os.path.dirname(myFile)
 try:
     # If file path does not exist, create directory
@@ -31,3 +31,4 @@ except Exception as e:
     print('Export to PDF failed: ' + str(e))
 # Close the document.
 myDocument.Close()
+# %%

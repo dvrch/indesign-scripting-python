@@ -5,9 +5,9 @@ dimensions and orientation of the document
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
-myFile = r'C:\ServerTestFiles\TestDocument.indd'
+myFile = r'TestDocument.indd'
 myDocument = app.Open(myFile)
 
 myDocumentPrefs = myDocument.DocumentPreferences

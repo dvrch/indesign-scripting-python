@@ -11,12 +11,12 @@ The default PDF export preset names are surrounded by square brackets (e.g., "[S
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
-myInddFile = r'C:\ServerTestFiles\TestDocument.indd'
+myInddFile = r'TestDocument.indd'
 myDocument = app.Open(myInddFile)
 
-myPDFFile = r'C:\ServerTestFiles\TestDocument.pdf'
+myPDFFile = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\TestDocument.pdf'
 directory = os.path.dirname(myPDFFile)
 
 idPDFType = 1952403524

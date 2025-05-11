@@ -9,7 +9,7 @@ with page 21 will be "21", not 1).
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 idPDFType = 1952403524
 idPageOrigin = 1380143215
@@ -43,7 +43,7 @@ for x in range(0, myMasterSpread.Pages.Count):
     myTextFrame.GeometricBounds = myGetBounds(myDocument, myMasterSpread.Pages.Item(x + 1))
 
 app.PDFExportPreferences.PageRange = "1-3, 6, 9"
-myExportedPDFFile = r'C:\ServerTestFiles\TestDocument.pdf'
+myExportedPDFFile = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\TestDocument.pdf'
 directory = os.path.dirname(myExportedPDFFile)
 
 if not os.path.exists(directory):

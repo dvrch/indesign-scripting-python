@@ -6,13 +6,13 @@ parameter (SavingIn).If the file has not been saved, save it to a specific file 
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 idYes = 2036691744
 if app.Documents.Count > 0:
     myDocument = app.Documents.Item(1)
     if not myDocument.Saved:
-        myFile = r'C:\ServerTestFiles\TestDocument.indd'
+        myFile = r'TestDocument.indd'
         myDocument.Close(idYes, myFile)
     else:
         myDocument.Close(idYes)

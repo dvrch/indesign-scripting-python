@@ -21,7 +21,7 @@ Now to call InDesign COM
 
 ```python
 import win32com.client
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 myDocument = app.Documents.Add()
 myPage = myDocument.Pages.Item(1)

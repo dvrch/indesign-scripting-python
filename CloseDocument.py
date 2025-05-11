@@ -5,7 +5,7 @@ Closes the current document.
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 if app.Documents.Count is not 0:
     app.Documents.Item(1).Close()

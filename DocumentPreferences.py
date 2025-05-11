@@ -5,7 +5,7 @@ dimensions and orientation of the document
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 myDocument = app.Documents.Add()
 
@@ -19,7 +19,7 @@ except Exception as e:
     print(e)
 
 # Save the file (fill in a valid file path on your system).
-myFile = r'C:\ServerTestFiles\TestDocument.indd'
+myFile = r'C:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\TestDocument.indd'
 
 myDocument = myDocument.Save(myFile)
 myDocument.Close()

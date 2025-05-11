@@ -13,7 +13,7 @@ import win32com.client
 import os
 
 #Use your version of InDesign here
-app = win32com.client.Dispatch('InDesign.Application.CC.2019')  
+app = win32com.client.Dispatch('InDesign.Application')  
 idnPath = os.path.abspath(r"path_to_book")
 bookPath = os.path.join(idnPath,'book_name.indb')
 

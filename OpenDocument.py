@@ -6,9 +6,9 @@ Opens an existing document. You'll have to fill in your own file path
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
-myFile = r'C:\ServerTestFiles\TestDocument.indd'
+myFile = r'TestDocument.indd'
 directory = os.path.dirname(myFile)
 
 if not os.path.exists(directory):

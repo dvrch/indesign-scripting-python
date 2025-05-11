@@ -6,9 +6,9 @@ a specified folder using the current PDF export settings.
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
-myFile = r'C:\ServerTestFiles\TestDocument.indd'
+myFile = r'TestDocument.indd'
 myDocument = app.Open(myFile)
 
 idPDFType = 1952403524

@@ -5,7 +5,7 @@ If the document preset "7x9Book" does not already exist, create it.
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 idPortrait = 1751738216
 try:

@@ -9,7 +9,7 @@ with page 21 will be "21", not 1).
 import win32com.client
 import os
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2017')
+app = win32com.client.Dispatch('InDesign.Application')
 
 idEPSType = 1952400720
 idPageOrigin = 1380143215
@@ -43,7 +43,7 @@ for x in range(0, myMasterSpread.Pages.Count):
     myTextFrame.GeometricBounds = myGetBounds(myDocument, myMasterSpread.Pages.Item(x + 1))
 
 app.EPSExportPreferences.PageRange = "1-3, 6, 9"
-myExportedEPSFile = r'C:\ServerTestFiles\TestDocument.eps'
+myExportedEPSFile = r'c:\Users\dvrch\Desktop\Straightforward-Obsidian2Latex\Indisign\TestDocument.eps'
 directory = os.path.dirname(myExportedEPSFile)
 
 if not os.path.exists(directory):

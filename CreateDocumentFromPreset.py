@@ -7,8 +7,8 @@ Create a document using a preset
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2019')
-my_file = r'C:\ServerTestFiles\TestDocument.indd'
+app = win32com.client.Dispatch('InDesign.Application')
+my_file = r'TestDocument.indd'
 
 # See all the available local presets
 for preset in app.DocumentPresets:

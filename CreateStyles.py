@@ -7,7 +7,7 @@ Create Paragraph and Character Styles
 
 import win32com.client
 
-app = win32com.client.Dispatch('InDesign.Application.CC.2019')
+app = win32com.client.Dispatch('InDesign.Application')
 
 try:
 # Paragraph Style 1
